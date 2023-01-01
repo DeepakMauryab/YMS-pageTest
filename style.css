@@ -37,7 +37,7 @@ nav .content {
 }
 
 .mainSection {
-    background: radial-gradient( transparent, rgba(175, 222, 254, 0.464) 80%,rgba(175, 222, 254, 0.464) ), url("./img/main.jpg");
+    background: radial-gradient( transparent, rgba(175, 222, 254, 0.464) 80%,rgba(175, 222, 254, 0.464) ), url("./img/box.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -164,6 +164,14 @@ nav .content {
 
 .contentNetwork div {
     margin: 1rem;
+}
+.contentNetwork > span {
+    text-transform: lowercase;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-left: 7px;
+    text-align: center;
+
 }
 
 .contentNetwork p {
@@ -294,9 +302,10 @@ footer ul li {
         padding: 1rem;
         box-sizing:content-box;
         justify-content: center;
-        background: radial-gradient( white, rgba(254, 255, 255, 0.673) 80%,rgba(175, 222, 254, 0.464) ), url("./img/main.jpg");
         height: 60vh;
+        background: radial-gradient( white, rgba(254, 255, 255, 0.673) 80%,rgba(175, 222, 254, 0.464) ), url("./img/box.png");
         background-repeat: no-repeat;
+        background-size: cover;
     }
     .mainSection .logoContent img {
         box-sizing: border-box;
@@ -339,3 +348,15 @@ footer ul li {
         border-radius: 50%;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
