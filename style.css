@@ -1,7 +1,8 @@
 :root {
     --colorMulti: #0089ca;
 }
-body{
+
+body {
     width: 100%;
 }
 
@@ -11,11 +12,13 @@ body{
     justify-content: end;
     gap: 20px;
 }
-nav{
+
+nav {
     width: 100%;
 }
+
 nav a img {
-  
+
     width: 13em;
     height: 13em;
 }
@@ -25,8 +28,11 @@ nav a img {
     cursor: pointer;
 }
 
-nav #navbarSupportedContent ul li {
-    font-size: 0.7rem;
+nav #navbarSupportedContent ul .nav-link {
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    padding: 0px 10px;
+    color: black;
 }
 
 nav .content {
@@ -37,25 +43,24 @@ nav .content {
 }
 
 .mainSection {
-    background: radial-gradient( transparent, rgba(175, 222, 254, 0.464) 80%,rgba(175, 222, 254, 0.464) ), url("./img/box.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* background: radial-gradient(transparent, rgba(175, 222, 254, 0.464) 80%, rgba(175, 222, 254, 0.464)), url("./img/box.png"); */
+    background: url("./img/mainHeader.jpg");
     width: 100%;
-    box-sizing: border-box;
-    height: 80vh;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 73vh;
     margin-top: -10px;
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
-    box-sizing: border-box;
 }
 
-.mainSection .logoContent img {
+/* .mainSection .logoContent img {
     box-sizing: border-box;
     width: 15vw;
     height: 35vh;
     margin-right: 50px;
-}
+} */
 
 .country {
     width: 100%;
@@ -117,20 +122,17 @@ nav .content {
 }
 
 .services .box img {
-    width: 3rem;
-    height: 3rem;
+    width: 4.1rem;
+    height: 4.1rem;
 }
 
 .services .box h6 {
-    width: 70%;
     color: var(--colorMulti);
-    font-size: 0.9rem;
-    font-weight: bold;
 }
 
 .services .box p {
     width: 80%;
-    font-size: 0.7rem;
+    font-size: 1rem;
     text-align: center;
 }
 
@@ -138,7 +140,12 @@ nav .content {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    /* gap: 30px; */
+}
+
+.vision h4 {
+    color: #26355a;
+
 }
 
 /* contact tab */
@@ -149,6 +156,7 @@ nav .content {
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding: 1rem;
 }
 
 .network {
@@ -165,9 +173,11 @@ nav .content {
 .contentNetwork div {
     margin: 1rem;
 }
-.contentNetwork > span {
+
+.contentNetwork>span {
     text-transform: lowercase;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.571);
     font-weight: bold;
     margin-left: 7px;
     text-align: center;
@@ -177,12 +187,13 @@ nav .content {
 .contentNetwork p {
 
     margin-bottom: 0rem;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
     color: var(--colorMulti);
 }
 
 .contentNetwork div span {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
 
 }
 
@@ -201,31 +212,29 @@ footer {
 }
 
 footer ul p {
-    font-size: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 footer ul li {
     list-style: none;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
 }
 
 .copyright {
     color: #ffffff;
     background-color: #1094d1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
-    box-sizing: content-box;
+
 }
 
 .copyright p {
     padding: 10px;
-    font-size: 0.7rem;
+    font-size: 1rem;
 }
 
 .copyright a {
-    font-size: 0.7rem;
+    font-size: 1rem;
     text-decoration: none;
     color: white;
     margin: 1rem;
@@ -237,14 +246,8 @@ footer ul li {
         font-size: 0.7rem;
     }
 
-    .country .first img {
-        width: 1.5vw;
-        height: 3vh;
-        border-radius: 50%;
-    }
-
-    .country .first .text {
-        font-size: 0.5rem;
+    .country {
+        display: none;
     }
 
     footer .icons img {
@@ -252,7 +255,17 @@ footer ul li {
         height: 1.5rem;
     }
 
+    .services .learnMore {
+        flex-direction: column;
+    }
+    nav #navbarSupportedContent ul .nav-link {
+        font-size: 0.9rem;
+        font-weight: light;
+        color: rgba(0, 0, 0, 0.635);
+    }
+    
 }
+
 
 @media screen and (max-width:769px) {
     #visionSecond {
@@ -260,103 +273,41 @@ footer ul li {
         flex-direction: column-reverse;
     }
 
-    .country {
-        padding: 1rem;
-        box-sizing: content-box;
+    .headContact {
+        display: none;
     }
 
-    .country .first {
+    .mainSection {
+        height: 60vh;
+    }
+}
+
+
+@media screen and (max-width:500px) {
+
+    nav a img {
+
+        width: 9em;
+        height: 9em;
+    }
+
+    .mainSection {
+        height: 35vh;
+    }
+}
+@media screen and (max-width:370px) {
+
+    nav a img {
+
+        width: 8em;
+        height: 8em;
+    }
+
+    .mainSection {
+        height: 30vh;
+    }
+    .responseColumn{
         display: flex;
-        width: 100%;
         flex-direction: column;
     }
-
-    .country .first img {
-        margin: 0;
-        padding: 0;
-        width: 3vw;
-        height: 6vh;
-    }
-
-    footer {
-        width: 100%;
-        padding: 1rem;
-        box-sizing:content-box;
-    }
-    .copyright{
-        width: 100%;
-        padding: 1rem;
-        box-sizing:content-box;
-    }
-    .contactTab{
-        width: 100%;
-        padding: 1rem;
-        box-sizing:content-box;
-    }
-    nav{
-        padding: 1rem;
-        box-sizing:content-box;
-    }
-    .mainSection{
-        width: 100%;
-        padding: 1rem;
-        box-sizing:content-box;
-        justify-content: center;
-        height: 60vh;
-        background: radial-gradient( white, rgba(254, 255, 255, 0.673) 80%,rgba(175, 222, 254, 0.464) ), url("./img/box.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    .mainSection .logoContent img {
-        box-sizing: border-box;
-        width: 25vw;
-        height: 35vh;
-        margin-right: 0px;
-    }
 }
-@media screen and (max-width:500px){
-    .country{
-        height: 1rem;
-        padding: 1rem;
-    }
-    .country .first{
-        padding: 0;
-    }
-    .country .first .text{
-        display: none;
-        box-sizing: border-box;
-    }
-    nav{
-
-        padding: 1rem;
-        box-sizing:content-box;
-    }
-    nav a img{
-          
-    width: 9em;
-    height: 9em;
-    }
-    .mainSection .logoContent img {
-        box-sizing: border-box;
-        width: 45vw;
-        height: 35vh;
-        margin-right: 0px;
-    }
-    .country .first img {
-        width: 4vw;
-        height: 4vh;
-        border-radius: 50%;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
